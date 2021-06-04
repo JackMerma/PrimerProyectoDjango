@@ -4,9 +4,12 @@
     <title>Template</title>
   </head>
   <body>
+    {% extends 'base.html' %}
+    {% block content %}
     <h1>Hola mundo!</h1>
     {{ request.user }}
     <br>
     {{ request.user.is_authenticated }}
+    {% endblock %}
   </body>
 </html>
