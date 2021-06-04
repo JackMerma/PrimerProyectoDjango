@@ -8,4 +8,4 @@ def myHomeView(*args, **kwargs):
 def another(request, *args, **kwargs):
     print(args, kwargs)
     print(request.user)
-    return HttpResponse('<h1>Otra pagina</h1>')
+    return render(request, "home.html", {})
