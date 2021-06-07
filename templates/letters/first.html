@@ -4,22 +4,25 @@
     <title>Letras</title>
   <script>
     function saludar(){
+      let fuentes=["sans-serif", "Times", "monospace", "Helvetica"];
       var text=document.getElementById('text').value;
-      var tags=document.getElementsByTagName('p');
-      for(i=0; i<tags.length;i++){
-        var p=tags[i], newp=document.createElement('p');
-        newp.innerHTML=text;
-        p.parentNode.replaceChild(newp, p);
+      var result="";
+      for(i=0; i<fuentes.length;i++){
+        result+="<p style='font-family:"+fuentes[i]+"'>"+text+"</p>";
       }
-      console.log(tags);
+      document.getElementById('result').innerHTML=result;
     }
   </script>
+<style>
+p{
+  font-size: 35px;
+}
+</style>
   </head>
   <body>
     {% extends 'letters/base.html' %}
     {% block content %}
-    <p id='result' style=''></p> 
-    <p id='result' style=''></p> 
+    <div id='result'></div>
     {% endblock %}
   </body>
 </html>
