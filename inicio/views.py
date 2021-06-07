@@ -11,4 +11,4 @@ def another(request, *args, **kwargs):
     return render(request, "home.html", {})
 
 def letras(request, *arg, **kwargs):
-    return render(request, "angular/first.html", {})
+    return render(request, "letters/first.html", {})
