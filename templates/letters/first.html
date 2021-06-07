@@ -2,10 +2,18 @@
 <html>
   <head>
     <title>Letras</title>
+  <script>
+    function saludar(){
+      var text=document.getElementById('text').value;
+      document.getElementById('result').innerHTML=text;
+    }
+  </script>
   </head>
   <body>
     {% extends 'letters/base.html' %}
     {% block content %}
+    <p id='result' style=''></p> 
+    <p id='result' style=''></p> 
     {% endblock %}
   </body>
 </html>
