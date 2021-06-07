@@ -5,7 +5,13 @@
   <script>
     function saludar(){
       var text=document.getElementById('text').value;
-      document.getElementById('result').innerHTML=text;
+      var tags=document.getElementsByTagName('p');
+      for(i=0; i<tags.length;i++){
+        var p=tags[i], newp=document.createElement('p');
+        newp.innerHTML=text;
+        p.parentNode.replaceChild(newp, p);
+      }
+      console.log(tags);
     }
   </script>
   </head>
