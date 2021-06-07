@@ -21,4 +21,5 @@ urlpatterns = [
     path('', myHomeView, name='Pagina de inicio'),    
     path('another/', another),
     path('admin/', admin.site.urls),
+    path('letras/', letras),
 ]
